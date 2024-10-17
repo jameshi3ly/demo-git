@@ -27,12 +27,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: job-script
-        run: echo HIIIIIIIII
-test1:
-  # This workflow contains a single job called "build"
-  build:
-  # need: jobs
+        run: echo 1
+  test:
     # The type of runner that the job will run on
+    needs: build
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -41,8 +39,7 @@ test1:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: test-scirpt
-        run: echo test1
+      - name: job-script
+        run: echo 2
 
-    
 
