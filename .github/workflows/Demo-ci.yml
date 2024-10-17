@@ -28,11 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: job-script
         run: echo HIIIIIIIII
-
 test1:
   # This workflow contains a single job called "build"
   build:
-  need: jobs
+  # need: jobs
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -46,3 +45,4 @@ test1:
         run: echo test1
 
     
+
